@@ -1,141 +1,371 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
+/* Main container */
+.container {
+  width: 394px;
+  margin: 0 auto;
+  background-color: #e0dbd8;
+  padding: 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  overflow-x: hidden;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
 }
 
-.main {
-  display: flex;
-  min-height: 100vh;
+/* Текстуры */
+.textureTop {
+    display: none;
+  position: relative;
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  height: 874px;
+  background-image: url("/texture.png");
+  background-size: 1024px 1024px;
+  background-position: top left;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
-  display: flex;
-  flex-direction: row;
+.textureBottom {
+  position: relative;
   width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+  height: 757px;
+  background-image: url("/texture.png");
+  background-size: 1024px 1024px;
+  background-position: top left;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
 }
 
-.ctas a {
+/* Имена пары */
+.names {
+  position: relative;
+  width: 349px;
+  height: 196px;
+  margin: 0 auto;
+  padding-top: 71px;
+  text-align: center;
+}
+
+.roman {
+  font-family: "Great Vibes", serif;
+  font-size: 79.87px;
+  color: #614c31;
+  margin: 0;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.tatyana {
+  font-family: "Great Vibes", serif;
+  font-size: 79.87px;
+  color: #614c31;
+  margin: 0;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ampersand {
+  font-family: "Qaitan Serif Font", serif;
+  font-size: 46.21px;
+  color: #614c31;
+  margin: -10px 0 0 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Фото пары */
+.couplePhoto {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.couplePhoto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Приглашение */
+.invitation {
+  position: relative;
+  padding: 0 21px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.weddingDayText {
+  width: 308px;
+  height: 45px;
+  margin: 0 auto 10px;
+}
+
+.weddingDayText img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.invitationTitle {
+  font-family: "Great Vibes", serif;
+  font-size: 26px;
+  color: #614c31;
+  margin: 10px 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.invitationText {
+  font-family: "Great Vibes", serif;
+  font-size: 23px;
+  color: #614c31;
+  line-height: 1.4;
+  text-align: justify;
+}
+
+.invitationText p {
+  margin: 15px 0;
+}
+
+/* Дата и время */
+.dateTime {
+  position: relative;
+  padding: 40px 21px;
+  text-align: center;
+}
+
+.dateImage {
+  width: 263px;
+  height: 58px;
+  margin: 0 auto 30px;
+}
+
+.dateImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.timeDetails {
+  font-family: "Great Vibes", serif;
+  color: #fdfcfc;
+}
+
+.timeItem {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.time {
+  font-size: 64px;
+  font-weight: normal;
+  line-height: 1;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.timeLabel {
+  font-size: 30.41px;
+  font-weight: normal;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.timeLocation {
+  font-size: 30px;
+  font-weight: normal;
+  display: block;
+  margin-top: 5px;
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+/* Закат и локация */
+.location {
+  position: relative;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.sunsetImage {
+  width: 100%;
+  height: 692px;
+  overflow: hidden;
+}
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+.sunsetImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+.locationTitle {
+  position: relative;
+  font-family: "Great Vibes", serif;
+  font-size: 64px;
+  color: #fdfcfc;
+  text-align: center;
+  margin: -100px 0 20px 0;
+  z-index: 1;
+}
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+.locationAddress {
+  position: relative;
+  font-family: "Great Vibes", serif;
+  font-size: 30px;
+  color: #fdfcfc;
+  text-align: center;
+  margin: 0 0 40px 0;
+  line-height: 1.3;
+  z-index: 1;
+}
+
+/* Dress code */
+.dressCode {
+  position: relative;
+  padding: 30px 21px;
+  text-align: center;
+}
+
+.dressCodeTitle {
+  font-family: "Cinzel", serif;
+  font-size: 63px;
+  color: #614c31;
+  margin: 0 0 20px 0;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 2px;
+}
+
+.colorCircles {
+  width: 352.23px;
+  height: 65px;
+  margin: 0 auto 20px;
+}
+
+.colorCircles img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.dressCodeText {
+  font-family: "Great Vibes", serif;
+  font-size: 24px;
+  color: #614c31;
+  margin: 15px 0;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+.dressCodeMen {
+  font-family: "Great Vibes", serif;
+  font-size: 24px;
+  color: #614c31;
+  margin: 15px 0 0 0;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+/* Детали */
+.details {
+  position: relative;
+  padding: 30px 21px;
+  text-align: center;
+}
+
+.detailsLine {
+  width: 242px;
+  height: 1px;
+  background-color: #614c31;
+  margin: 0 auto 15px;
+}
+
+.detailsTitle {
+  font-family: "Great Vibes", serif;
+  font-size: 30px;
+  color: #614c31;
+  margin: 0 0 15px 0;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.detailsText {
+  font-family: "Great Vibes", serif;
+  font-size: 19.75px;
+  color: #614c31;
+  margin: 15px 0;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+.detailsText u {
+  text-decoration: underline;
+}
+
+.contactText {
+  font-family: "Great Vibes", serif;
+  font-size: 19.75px;
+  color: #614c31;
+  margin: 15px 0 0 0;
+  line-height: 1.3;
+  text-align: justify;
+}
+
+.contactText strong {
+  font-weight: normal;
+  text-decoration: none;
+}
+
+/* Заключение */
+.conclusion {
+  position: relative;
+  padding: 0;
+  text-align: center;
+}
+
+.conclusionImage {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.conclusionImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.conclusionTitle {
+  font-family: "Great Vibes", serif;
+  font-size: 60.15px;
+  color: #614c31;
+  margin: -50px 0 20px 0;
+  position: relative;
+  z-index: 1;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.conclusionText {
+  position: relative;
+  font-family: "Great Vibes", serif;
+  font-size: 19.75px;
+  color: #614c31;
+  padding: 0 21px;
+  margin: 15px 0;
+  line-height: 1.3;
+  text-align: justify;
+  z-index: 1;
+}
+
+.conclusionEnd {
+  position: relative;
+  font-family: "Great Vibes", serif;
+  font-size: 19.75px;
+  color: #614c31;
+  padding: 0 21px;
+  margin: 15px 0 40px 0;
+  line-height: 1.3;
+  text-align: justify;
+  z-index: 1;
+  font-weight: normal;
+  font-style: normal;
 }

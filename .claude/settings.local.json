@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma-remote-mcp__get_metadata",
+      "mcp__figma-remote-mcp__get_screenshot",
+      "mcp__figma-remote-mcp__get_design_context",
+      "Bash(__NEW_LINE_74f25466dce7908d__ cd \"D:\\\\dev\\\\dev\\\\wedding\\\\wedding\\\\public\")",
+      "Bash(curl:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}

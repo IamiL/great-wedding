@@ -1,0 +1,11 @@
+
+> wedding@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 3060, using available port 3004 instead.
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3004
+- Network:       http://172.18.0.1:3004
+
+✓ Starting...
+✓ Ready in 4.2s

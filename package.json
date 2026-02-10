@@ -10,6 +10,7 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@fontsource/great-vibes": "^5.2.8",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
