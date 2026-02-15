@@ -165,16 +165,16 @@ export default function Home() {
                     </a>
                 </div>
                 <div id={styles.dateTimeBackground}>
-                    {/* Старый фон с фото заката */}
-                    {/*<Image*/}
-                    {/*    src="/sunset.png"*/}
-                    {/*    alt="закат"*/}
-                    {/*    width={395}*/}
-                    {/*    height={692}*/}
-                    {/*    unoptimized*/}
-                    {/*/>*/}
+                    {/* Фото заката - показывается пока видео грузится */}
+                    <Image
+                        src="/sunset.png"
+                        alt="закат"
+                        width={395}
+                        height={692}
+                        unoptimized
+                    />
 
-                    {/* Видео фон */}
+                    {/* Видео фон - отображается поверх изображения после загрузки */}
                     <video
                         autoPlay
                         loop
@@ -229,8 +229,8 @@ export default function Home() {
                     <Image
                         src="/rvan2.png"
                         alt="wedding day"
-                        width={839.02}
-                        height={1068}
+                        width={394}
+                        height={933}
                         unoptimized
                     />
                 </div>

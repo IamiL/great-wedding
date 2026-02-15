@@ -197,7 +197,7 @@
 /* Дата и время */
 .dateTime {
     position: relative;
-    height: 700px;
+    height: 750px;
 }
 
 #dateTimeContent {
@@ -218,13 +218,25 @@
     left: -400px;
     z-index: 0;
     /*height: 100%;*/
-    height: 730px;
+    height: 885px;
 }
 
 #dateTimeBackground > img {
     width: 100%;
-    display: block;
+    margin-left: 400px;
+    /*display: block;*/
     object-fit: cover;
+    height: 100%;
+}
+
+#dateTimeBackground > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*width: 100%;*/
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 #dateTimeBackground > video {
@@ -314,28 +326,26 @@
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 24px;
-    background-color: rgba(253, 252, 252, 0.95);
-    color: #614c31;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #fdfcfc;
     font-family: "Great Vibes", serif;
     font-size: 22px;
     text-decoration: none;
+    border: 1px solid rgba(253, 252, 252, 0.6);
     border-radius: 30px;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 1;
     margin-bottom: 40px;
 }
 
 .mapButton:hover {
-    background-color: #fdfcfc;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: rgba(253, 252, 252, 0.1);
+    border-color: rgba(253, 252, 252, 0.9);
 }
 
 .mapButton:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background-color: rgba(253, 252, 252, 0.15);
 }
 
 .mapButton svg {
@@ -348,7 +358,7 @@
     padding: 0;
     text-align: center;
     height: 950px;
-    margin-top: -180px;
+    margin-top: -90px;
     z-index: 1;
     isolation: isolate;
 }
@@ -357,7 +367,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 200px;
+    margin-top: 100px;
     z-index: 4;
     width: 100%;
     padding: 0 21px;
