@@ -169,12 +169,6 @@ export default function Home() {
                         loop
                         muted
                         playsInline
-                        style={{
-                            // width: '100%',
-                            height: '100%',
-                            objectFit: 'cover',
-                            display: 'block'
-                        }}
                     >
                         {/* WebM VP9 для современных браузеров (Chrome, Firefox) - лучшее сжатие */}
                         <source src="/sunset_video1.webm" type="video/webm; codecs=vp9" />

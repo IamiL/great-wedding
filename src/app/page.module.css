@@ -215,13 +215,20 @@
 #dateTimeBackground {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -400px;
     z-index: 0;
+    /*height: 100%;*/
+    height: 730px;
 }
 
 #dateTimeBackground > img {
     width: 100%;
     display: block;
+    object-fit: cover;
+}
+
+#dateTimeBackground > video {
+    height: 100%;
     object-fit: cover;
 }
 
