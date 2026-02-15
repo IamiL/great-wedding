@@ -4,28 +4,32 @@ import styles from "./page.module.css";
 export default function Home() {
     return (
         <div className={styles.container}>
-            {/* Верхняя текстура */}
-            <div className={styles.textureTop}></div>
-
             {/* Имена пары */}
-            <section className={styles.names}>
-                <div className={styles.names1}>
-                    <h1 className={styles.roman}>Роман</h1>
-                    <p className={styles.ampersand}>&</p>
+            <section id={styles.names}>
+                <div id={styles.namesContent}>
+                    <div className={styles.names1}>
+                        <h1 className={styles.roman}>Роман</h1>
+                        <p className={styles.ampersand}>&</p>
+                    </div>
+                    <h1 className={styles.tatyana}>Татьяна</h1>
+                    <Image
+                        src="/tanya_roma.png"
+                        alt="Роман и Татьяна"
+                        width={481}
+                        height={571}
+                        priority
+                        unoptimized
+                    />
                 </div>
-                <h1 className={styles.tatyana}>Татьяна</h1>
-            </section>
-
-            {/* Фото пары */}
-            <section className={styles.couplePhoto}>
-                <Image
-                    src="/tanya_roma.png"
-                    alt="Роман и Татьяна"
-                    width={481}
-                    height={571}
-                    priority
-                    unoptimized
-                />
+                <div id={styles.namesBackground}>
+                    <Image
+                        src="/textura-start.png"
+                        alt="wedding day"
+                        width={397}
+                        height={874}
+                        unoptimized
+                    />
+                </div>
             </section>
             {/* Приглашение */}
             <section className={styles.invitation}>
@@ -150,13 +154,33 @@ export default function Home() {
                     </p>
                 </div>
                 <div id={styles.dateTimeBackground}>
-                    <Image
-                        src="/sunset.png"
-                        alt="закат"
-                        width={395}
-                        height={692}
-                        unoptimized
-                    />
+                    {/* Старый фон с фото заката */}
+                    {/*<Image*/}
+                    {/*    src="/sunset.png"*/}
+                    {/*    alt="закат"*/}
+                    {/*    width={395}*/}
+                    {/*    height={692}*/}
+                    {/*    unoptimized*/}
+                    {/*/>*/}
+
+                    {/* Видео фон */}
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        style={{
+                            // width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            display: 'block'
+                        }}
+                    >
+                        {/* WebM VP9 для современных браузеров (Chrome, Firefox) - лучшее сжатие */}
+                        <source src="/sunset_video1.webm" type="video/webm; codecs=vp9" />
+                        {/* MP4 fallback для Safari/iOS */}
+                        <source src="/sunset_video1.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </section>
 
@@ -171,11 +195,11 @@ export default function Home() {
                     <div className={styles.colorCircles}>
                         <svg width="353" height="65" viewBox="0 0 353 65" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="32.5" cy="32.5" r="31.5" fill="#FDE8E7" stroke="#FDFCFC" stroke-width="2"/>
-                            <circle cx="104.307" cy="32.5" r="31.5" fill="#D7B4AE" stroke="#FDFCFC" stroke-width="2"/>
-                            <circle cx="176.114" cy="32.5" r="31.5" fill="#BCA68F" stroke="#FDFCFC" stroke-width="2"/>
-                            <circle cx="247.921" cy="32.5" r="31.5" fill="#7C825E" stroke="#FDFCFC" stroke-width="2"/>
-                            <circle cx="319.729" cy="32.5" r="31.5" fill="#614C31" stroke="#FDFCFC" stroke-width="2"/>
+                            <circle cx="32.5" cy="32.5" r="31.5" fill="#FDE8E7" stroke="#FDFCFC" strokeWidth="2"/>
+                            <circle cx="104.307" cy="32.5" r="31.5" fill="#D7B4AE" stroke="#FDFCFC" strokeWidth="2"/>
+                            <circle cx="176.114" cy="32.5" r="31.5" fill="#BCA68F" stroke="#FDFCFC" strokeWidth="2"/>
+                            <circle cx="247.921" cy="32.5" r="31.5" fill="#7C825E" stroke="#FDFCFC" strokeWidth="2"/>
+                            <circle cx="319.729" cy="32.5" r="31.5" fill="#614C31" stroke="#FDFCFC" strokeWidth="2"/>
                         </svg>
                     </div>
 

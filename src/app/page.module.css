@@ -22,25 +22,47 @@
     mix-blend-mode: overlay;
 }
 
-.textureBottom {
+/*.textureBottom {*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*    height: 757px;*/
+/*    !*background-image: url("/texture.png");*!*/
+/*    background-size: 1024px 1024px;*/
+/*    background-position: top left;*/
+/*    opacity: 0.2;*/
+/*    mix-blend-mode: overlay;*/
+/*}*/
+
+#names{
     position: relative;
-    width: 100%;
-    height: 757px;
-    /*background-image: url("/texture.png");*/
-    background-size: 1024px 1024px;
-    background-position: top left;
-    opacity: 0.2;
-    mix-blend-mode: overlay;
+    height: 860px;
 }
 
 /* Имена пары */
-.names {
-    position: relative;
-    width: 349px;
-    height: 196px;
+#namesContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*width: 349px;*/
+    /*height: 196px;*/
     margin: 0 auto;
     padding-top: 71px;
     text-align: center;
+    z-index: 1;
+}
+
+#namesBackground{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#namesBackground > img {
+    width: 100%;
+    object-fit: cover;
+    mix-blend-mode: overlay;
 }
 
 .names1 {
@@ -80,13 +102,13 @@
 }
 
 /* Фото пары */
-.couplePhoto {
-    width: 100%;
-    /*overflow: hidden;*/
-    margin-top: 30px;
-}
+/*.couplePhoto {*/
+/*    width: 100%;*/
+/*    !*overflow: hidden;*!*/
+/*}*/
 
-.couplePhoto img {
+#namesContent > img {
+    margin-top: 30px;
     width: 100%;
     display: block;
     object-fit: cover;
@@ -105,14 +127,14 @@
     height: unset;
 }
 
-#invitationTexture {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    pointer-events: none;
-}
+/*#invitationTexture {*/
+/*    width: 100%;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    z-index: 2;*/
+/*    pointer-events: none;*/
+/*}*/
 
 #invitationTexture > img {
     width: 100%;
@@ -139,17 +161,17 @@
     margin-top: -90px;
 }
 
-.weddingDayText {
-    width: 308px;
-    height: 45px;
-    margin: 0 auto 10px;
-}
+/*.weddingDayText {*/
+/*    width: 308px;*/
+/*    height: 45px;*/
+/*    margin: 0 auto 10px;*/
+/*}*/
 
-.weddingDayText img {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
+/*.weddingDayText img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    display: block;*/
+/*}*/
 
 .invitationTitle {
     font-family: "Great Vibes", serif;
@@ -176,7 +198,6 @@
 .dateTime {
     position: relative;
     height: 700px;
-    background-image: url("/sunset.jpg");
 }
 
 #dateTimeContent {
@@ -204,11 +225,11 @@
     object-fit: cover;
 }
 
-.dateImage {
-    width: 263px;
-    height: 58px;
-    margin: 0 auto 30px;
-}
+/*.dateImage {*/
+/*    width: 263px;*/
+/*    height: 58px;*/
+/*    margin: 0 auto 30px;*/
+/*}*/
 
 .timeDetails {
     font-family: "Great Vibes", serif;
@@ -242,23 +263,23 @@
 }
 
 /* Закат и локация */
-.location {
-    position: relative;
-    padding: 0;
-}
+/*.location {*/
+/*    position: relative;*/
+/*    padding: 0;*/
+/*}*/
 
-.sunsetImage {
-    width: 100%;
-    height: 692px;
-    overflow: hidden;
-}
+/*.sunsetImage {*/
+/*    width: 100%;*/
+/*    height: 692px;*/
+/*    overflow: hidden;*/
+/*}*/
 
-.sunsetImage img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-}
+/*.sunsetImage img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    display: block;*/
+/*    object-fit: cover;*/
+/*}*/
 
 .locationTitle {
     position: relative;
@@ -315,21 +336,21 @@
     object-fit: cover;
 }
 
-#dressCodeTexture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    pointer-events: none;
-}
+/*#dressCodeTexture {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    z-index: 3;*/
+/*    pointer-events: none;*/
+/*}*/
 
-#dressCodeTexture > img {
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-    mix-blend-mode: overlay;
-}
+/*#dressCodeTexture > img {*/
+/*    width: 100%;*/
+/*    object-fit: cover;*/
+/*    opacity: 0.5;*/
+/*    mix-blend-mode: overlay;*/
+/*}*/
 
 .dressCodeTitle {
     font-family: "Cinzel", serif;
@@ -372,11 +393,11 @@
 }
 
 /* Детали */
-.details {
-    position: relative;
-    padding: 30px 21px;
-    text-align: center;
-}
+/*.details {*/
+/*    position: relative;*/
+/*    padding: 30px 21px;*/
+/*    text-align: center;*/
+/*}*/
 
 .detailsLine {
     width: 242px;
