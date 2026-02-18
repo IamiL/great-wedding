@@ -3,15 +3,17 @@ import styles from "./page.module.css";
 
 export default function Home() {
     return (
-        <div className={styles.container}>
+        <div id={styles.container}>
             {/* Имена пары */}
             <section id={styles.names}>
                 <div id={styles.namesContent}>
-                    <div className={styles.names1}>
-                        <h1 className={styles.roman}>Роман</h1>
-                        <p className={styles.ampersand}>&</p>
+                    <div id={styles.names1}>
+                        <h1 id={styles.roman}>Роман</h1>
+                        <p id={styles.ampersand}>&</p>
                     </div>
-                    <h1 className={styles.tatyana}>Татьяна</h1>
+                    <div id={styles.names2}>
+                        <h1 id={styles.tatyana}>Татьяна</h1>
+                    </div>
                     <Image
                         src="/tanya_roma.png"
                         alt="Роман и Татьяна"
@@ -32,7 +34,7 @@ export default function Home() {
                 </div>
             </section>
             {/* Приглашение */}
-            <section className={styles.invitation}>
+            <section id={styles.invitation}>
                 <div id={styles.invitationContent}>
                     <h2>
                         <svg width="308" height="45" viewBox="0 0 308 45" fill="none"
@@ -67,8 +69,8 @@ export default function Home() {
                                 fill="#614C31"/>
                         </svg>
                     </h2>
-                    <h2 className={styles.invitationTitle}>Дорогие, близкие нам люди!</h2>
-                    <div className={styles.invitationText}>
+                    <h2 id={styles.invitationTitle}>Дорогие, близкие нам люди!</h2>
+                    <div id={styles.invitationText}>
                         <p>
                             Совсем скоро наступит самый счастливый момент - день нашей свадьбы!
                         </p>
@@ -105,7 +107,7 @@ export default function Home() {
             </section>
 
             {/* Дата и время */}
-            <section className={styles.dateTime}>
+            <section id={styles.dateTime}>
                 <div id={styles.dateTimeContent}>
                     <svg width="263" height="58" viewBox="0 0 263 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -133,21 +135,21 @@ export default function Home() {
                             fill="#FDFCFC"/>
                     </svg>
 
-                    <div className={styles.timeDetails}>
-                        <div className={styles.timeItem}>
-                            <span className={styles.time}>13:40</span>
-                            <span className={styles.timeLabel}>роспись</span>
-                            <span className={styles.timeLocation}>
+                    <div id={styles.timeDetails}>
+                        <div id={styles.timeItem}>
+                            <span id={styles.time}>13:40</span>
+                            <span id={styles.timeLabel}>роспись</span>
+                            <span id={styles.timeLocation}>
               ул. Малая Покровская, д. 9
             </span>
                         </div>
-                        <div className={styles.timeItem}>
-                            <span className={styles.time}>17:30</span>
-                            <span className={styles.timeLabel}>сбор гостей</span>
+                        <div id={styles.timeItem}>
+                            <span id={styles.time}>17:30</span>
+                            <span id={styles.timeLabel}>сбор гостей</span>
                         </div>
                     </div>
-                    <h3 className={styles.locationTitle}>Локация</h3>
-                    <p className={styles.locationAddress}>
+                    <h3 id={styles.locationTitle}>Локация</h3>
+                    <p id={styles.locationAddress}>
                         Село Большая Ельня
                         <br/>
                         Магистральная, 54
@@ -156,10 +158,12 @@ export default function Home() {
                         href="https://yandex.ru/maps/?text=Село Большая Ельня, Магистральная, 54"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={styles.mapButton}
+                        id={styles.mapButton}
                     >
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                fill="currentColor"/>
                         </svg>
                         Открыть в Яндекс.Картах
                     </a>
@@ -182,22 +186,22 @@ export default function Home() {
                         playsInline
                     >
                         {/* WebM VP9 для современных браузеров (Chrome, Firefox) - лучшее сжатие */}
-                        <source src="/sunset_video1.webm" type="video/webm; codecs=vp9" />
+                        <source src="/sunset_video1.webm" type="video/webm; codecs=vp9"/>
                         {/* MP4 fallback для Safari/iOS */}
-                        <source src="/sunset_video1.mp4" type="video/mp4" />
+                        <source src="/sunset_video1.mp4" type="video/mp4"/>
                     </video>
                 </div>
             </section>
 
             {/* Dress code */}
-            <section className={styles.dressCode}>
+            <section id={styles.dressCode}>
                 <div id={styles.dressCodeContent}>
-                    <h3 className={styles.dressCodeTitle}>Dress code</h3>
-                    <p className={styles.dressCodeText}>
+                    <h3 id={styles.dressCodeTitle}>Dress code</h3>
+                    <p id={styles.dressCodeText}>
                         Нам будет особенно приятно видеть вас в нарядах цветовой гаммы нашей
                         свадьбы
                     </p>
-                    <div className={styles.colorCircles}>
+                    <div id={styles.colorCircles}>
                         <svg width="353" height="65" viewBox="0 0 353 65" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <circle cx="32.5" cy="32.5" r="31.5" fill="#FDE8E7" stroke="#FDFCFC" strokeWidth="2"/>
@@ -208,16 +212,16 @@ export default function Home() {
                         </svg>
                     </div>
 
-                    <p className={styles.dressCodeMen}>
+                    <p id={styles.dressCodeMen}>
                         Для мужчин будет уместен классический костюм и светлая рубашка
                     </p>
-                    <div className={styles.detailsLine}></div>
-                    <h3 className={styles.detailsTitle}>Детали</h3>
-                    <p className={styles.detailsText}>
+                    <div id={styles.detailsLine}></div>
+                    <h3 id={styles.detailsTitle}>Детали</h3>
+                    <p id={styles.detailsText}>
                         Просим подтвердить своё присутствие до <u>1 марта.</u> Для нас очень
                         важно знать, кто сможет разделить с нами этот особенный день.
                     </p>
-                    <p className={styles.contactText}>
+                    <p id={styles.contactText}>
                         По всем вопросам и предложениям вы всегда можете обратиться к нашему
                         ведущему: <br/>
                         <strong>+7 910 886 7996 Борис</strong>
@@ -247,20 +251,20 @@ export default function Home() {
             </section>
 
             {/* Детали */}
-            {/*<section className={styles.details}>*/}
+            {/*<section id={styles.details}>*/}
             {/*    */}
             {/*</section>*/}
 
             {/* Заключение */}
-            <section className={styles.conclusion}>
+            <section id={styles.conclusion}>
                 <div id={styles.conclusionContent}>
-                    <h3 className={styles.conclusionTitle}>Дорогие гости!</h3>
-                    <p className={styles.conclusionText}>
+                    <h3 id={styles.conclusionTitle}>Дорогие гости!</h3>
+                    <p id={styles.conclusionText}>
                         Для нас нет ничего ценнее, чем провести этот день с близкими людьми.
                         Мы будем счастливы вашему присутствию. Если вы решите дополнить его
                         знаком внимания, мы примем его с благодарностью и теплом.
                     </p>
-                    <p className={styles.conclusionEnd}>
+                    <p id={styles.conclusionEnd}>
                         С нетерпением ждём встречи с вами!
                     </p>
                 </div>
@@ -273,11 +277,20 @@ export default function Home() {
                         unoptimized
                     />
                 </div>
+                <div id={styles.conclusionBackground2}>
+                    <Image
+                        src="/textura-end.png"
+                        alt="свадьба"
+                        width={381.33}
+                        height={572}
+                        unoptimized
+                    />
+                </div>
 
             </section>
 
             {/* Нижняя текстура */}
-            {/*<div className={styles.textureBottom}></div>*/}
+            {/*<div id={styles.textureBottom}></div>*/}
         </div>
     );
 }
