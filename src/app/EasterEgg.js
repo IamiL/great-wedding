@@ -118,7 +118,7 @@ export default function EasterEgg() {
                             fill={c.fill}
                             stroke="#FDFCFC"
                             strokeWidth="2"
-                            style={{ cursor: 'pointer' }}
+                            // style={{ cursor: 'pointer' }}
                             onClick={() => handleCircle(i)}
                         />
                     ))}
