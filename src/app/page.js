@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import EasterEgg from "./EasterEgg";
 
 export default function Home() {
     return (
@@ -201,16 +202,7 @@ export default function Home() {
                         Нам будет особенно приятно видеть вас в нарядах цветовой гаммы нашей
                         свадьбы
                     </p>
-                    <div id={styles.colorCircles}>
-                        <svg width="353" height="65" viewBox="0 0 353 65" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="32.5" cy="32.5" r="31.5" fill="#FDE8E7" stroke="#FDFCFC" strokeWidth="2"/>
-                            <circle cx="104.307" cy="32.5" r="31.5" fill="#D7B4AE" stroke="#FDFCFC" strokeWidth="2"/>
-                            <circle cx="176.114" cy="32.5" r="31.5" fill="#BCA68F" stroke="#FDFCFC" strokeWidth="2"/>
-                            <circle cx="247.921" cy="32.5" r="31.5" fill="#7C825E" stroke="#FDFCFC" strokeWidth="2"/>
-                            <circle cx="319.729" cy="32.5" r="31.5" fill="#614C31" stroke="#FDFCFC" strokeWidth="2"/>
-                        </svg>
-                    </div>
+                    <EasterEgg />
 
                     <p id={styles.dressCodeMen}>
                         Для мужчин будет уместен классический костюм и светлая рубашка
