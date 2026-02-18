@@ -49,7 +49,7 @@ export default function EasterEgg() {
             y: Math.random() * (h - size),
         };
 
-        const speed = 2.5 + Math.random() * 1.5;
+        const speed = 1 + Math.random() * 1.5;
         const angle = Math.random() * Math.PI * 2;
         velRef.current = {
             x: Math.cos(angle) * speed,
